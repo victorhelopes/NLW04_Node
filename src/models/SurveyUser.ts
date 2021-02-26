@@ -6,17 +6,17 @@ import { User } from "../models/User";
 @Entity("surveys_users")
 class SurveyUser{
     @PrimaryColumn()
-    readonly id: String;
+    readonly id: string;
 
     @Column()
-    user_id : String;
+    user_id : string;
 
     @ManyToOne(()=>User)
     @JoinColumn({name : "user_id"})
     user: User;
 
     @Column()
-    survey_id : String;
+    survey_id : string;
 
     @ManyToOne(()=>Survey)
     @JoinColumn({name : "Survey_id"})
